@@ -9,13 +9,13 @@
 </head>
 <body>
     <div id="myapp">
-
+        
         <input type="text" v-model="newTask" @keyup.enter="addTask" placeholder="inserisci qui il nuovo task">
         <button @click="addTask">add task</button>
 
         <div v-if="tasks.length === 0"> Nessun task da compiere</div>
-        <div v-else class="task" v-for="task, i in tasks" :key="i">
-            {{task.text}} <span @click="removeTask(i)">&#10005;</span>
+        <div v-else class="task" :class="isDone" v-for="task, i in tasks" :key="i">
+            <span @click="taskDone(i)" >{{task.text}}</span> <span @click="removeTask(i)">&#10005;</span>
         </div>
 
     </div>
