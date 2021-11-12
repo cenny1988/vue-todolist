@@ -6,3 +6,12 @@
 body{
     background-color: lightslategrey;
 }
+.task{
+    height: 1.5rem;
+    
+}
+.task span{
+    cursor: pointer;
+    line-height: 1.5rem;
+    margin-left: .5rem;
+}

@@ -8,9 +8,17 @@
     <title>TODOLIST</title>
 </head>
 <body>
-    
+    <div id="myapp">
+
+        <div class="task" v-for="task, i in tasks" :key="i">
+            {{task.text}} <span @click="removeTask(i)">&#10005;</span>
+        </div>
 
 
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
     <script src="js/main.js"></script>
 </body>
 </html>
