@@ -19,17 +19,17 @@ poi se l’utente vuole potrà anche cancellarlo del tutto.
 var app = new Vue({
     el: '#myapp',
     data: {
-        isDone: true,
-        isFalse: false,
+        // isDone: 'false',
+        // isFalse: 'false',
         newTask: null,
         tasks: [
             {
                 text: 'Fare la spesa',
-                done: true
+                done: 'true'
             },
             {
                 text: 'Fare la bucato',
-                done: false
+                done: 'false'
             },
         ]
     },
@@ -47,7 +47,7 @@ var app = new Vue({
             }
         },
         taskDone(index){
-            this.tasks[index].done === true ? this.tasks[index].done = false : this.tasks[index].done = true;
+            this.tasks[index].done === 'true' ? this.tasks[index].done = 'false' : this.tasks[index].done = 'true';
             console.log(this.tasks[index].done);
         }
     },

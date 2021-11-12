@@ -15,9 +15,9 @@ body{
     line-height: 1.5rem;
     margin-left: .5rem;
 }
-.task.done span:first-child{
+.task.false span:first-child{
     text-decoration: line-through;
 }
-.task.false span:first-child{
+.task.done span:first-child{
     text-decoration: none;
 }
