@@ -15,7 +15,8 @@
 
         <div v-if="tasks.length === 0"> Nessun task da compiere</div>
         <div v-else class="task" :class="task.done" v-for="task, i in tasks" :key="i">
-            <span @click="taskDone(i)" >{{task.text}}</span> <span @click="removeTask(i)">&#10005;</span>
+            <span @click="taskDone(i)" >{{task.text}}</span> 
+            <span @click="removeTask(i)">&#10005;</span>
         </div>
 
     </div>
