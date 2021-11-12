@@ -19,6 +19,7 @@ poi se l’utente vuole potrà anche cancellarlo del tutto.
 var app = new Vue({
     el: '#myapp',
     data: {
+        newTask: '',
         tasks: [
             {
                 text: 'Fare la spesa',
@@ -33,7 +34,15 @@ var app = new Vue({
     methods: {
         removeTask(index){
             this.tasks.splice(index,1);
+        },
+        addTask(){
+            if(this.newTask.length > 3 && this.newTask[0] !== ' '){
+                this.tasks.push({
+                    text: this.newTask,
+                    done: false
+                });
+                this.newTask= "";
+            }
         }
-        
     },
 });
