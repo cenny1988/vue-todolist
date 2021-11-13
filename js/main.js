@@ -19,8 +19,6 @@ poi se l’utente vuole potrà anche cancellarlo del tutto.
 var app = new Vue({
     el: '#myapp',
     data: {
-        // isDone: 'false',
-        // isFalse: 'false',
         newTask: null,
         tasks: [
             {

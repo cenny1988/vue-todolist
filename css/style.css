@@ -18,6 +18,3 @@ body{
 .task.true span:first-child{
     text-decoration: line-through;
 }
-.task.false span:first-child{
-    text-decoration: none;
-}
